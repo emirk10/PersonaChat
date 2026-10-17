@@ -1,0 +1,21 @@
+services:
+  webapplication1:
+    image: ${DOCKER_REGISTRY-}webapplication1
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: final
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+
+  python_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: python_base
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./python_app:/app/python_app
+    command: ["bash", "-c", "cd /app/python_app && python -m flask run --host=0.0.0.0"]

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flask App</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="chat-wrapper">
+        <div id="user-chat-container">
+            <div id="user-chat-box" class="chat-box-common"></div>
+            <div id="user-input-container" class="input-container-common">
+                <input type="text" id="user-input" class="input-field-common" placeholder="Type your message...">
+                <button id="user-send-button" class="send-button-common" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+        <div id="persona-chat-container">
+            <div id="persona-chat-box" class="chat-box-common"></div>
+            <div id="persona-input-container" class="input-container-common">
+                <input type="text" id="persona-input" class="input-field-common" placeholder="Type persona message...">
+                <button id="persona-send-button" class="send-button-common" onclick="sendPersona()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/site.js"></script>
+</body>
+</html>
